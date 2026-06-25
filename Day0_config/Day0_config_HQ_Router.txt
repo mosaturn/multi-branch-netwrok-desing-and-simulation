@@ -1,0 +1,41 @@
+! ============================================================
+! Day 0 Configuration - HQ_Router
+! Purpose: Enable SSH management access before Python automation
+! Management IP: 10.1.1.1/32 (Loopback0)
+! ============================================================
+
+Router> enable
+Router# configure terminal
+
+! --- Hostname ---
+Router(config)# hostname HQ_Router
+
+! --- Domain and SSH Setup ---
+HQ_Router(config)# ip domain-name techlink.local
+HQ_Router(config)# crypto key generate rsa modulus 2048
+HQ_Router(config)# ip ssh version 2
+
+! --- Local Credentials ---
+HQ_Router(config)# enable secret cisco
+HQ_Router(config)# username admin secret cisco
+
+! --- Loopback for Management (always up, SSH target) ---
+HQ_Router(config)# interface Loopback0
+HQ_Router(config-if)# ip address 10.1.1.1 255.255.255.255
+HQ_Router(config-if)# no shutdown
+HQ_Router(config-if)# exit
+
+! --- LAN Trunk (needed so PC on HQ LAN can reach this router) ---
+HQ_Router(config)# interface GigabitEthernet0/4
+HQ_Router(config-if)# ip address 10.1.0.1 255.255.255.252
+HQ_Router(config-if)# no shutdown
+HQ_Router(config-if)# exit
+
+! --- VTY Lines for SSH Access ---
+HQ_Router(config)# line vty 0 15
+HQ_Router(config-line)# login local
+HQ_Router(config-line)# exec-timeout 5 0
+HQ_Router(config-line)# transport input ssh
+HQ_Router(config-line)# exit
+
+HQ_Router(config)# end

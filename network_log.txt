@@ -1,0 +1,673 @@
+2026-06-24 15:22:46,968 [INFO] ============================================================
+2026-06-24 15:22:46,968 [INFO] TechLink Solutions - Network Automation System
+2026-06-24 15:22:46,968 [INFO] Mode: SIMULATION (MOCK)
+2026-06-24 15:22:46,968 [INFO] ============================================================
+2026-06-24 15:22:46,968 [INFO] config.json loaded successfully. Routers: 3 | Switches: 3
+2026-06-24 15:22:46,968 [INFO] ============================================================
+2026-06-24 15:22:46,968 [INFO] PHASE 1: Router Configuration
+2026-06-24 15:22:46,968 [INFO] ============================================================
+2026-06-24 15:22:46,968 [INFO] 
+Configuring HQ_Router...
+2026-06-24 15:22:46,968 [INFO] [MOCK] Initialized configurator for: HQ_Router
+2026-06-24 15:22:46,968 [INFO] [MOCK] Initiating SSH connection to HQ_Router at 10.1.1.1...
+2026-06-24 15:22:47,477 [INFO] [MOCK] SSH connection established to HQ_Router.
+2026-06-24 15:22:47,477 [INFO] [MOCK] HQ_Router> enable
+2026-06-24 15:22:47,477 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:47,477 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:47,477 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:47,588 [INFO] [MOCK] HQ_Router(config)# hostname HQ_Router
+2026-06-24 15:22:47,588 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:47,588 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:47,588 [INFO] [HQ_Router] Hostname configured.
+2026-06-24 15:22:47,588 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:47,588 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:47,691 [INFO] [MOCK] HQ_Router(config)# interface g0/0
+2026-06-24 15:22:47,792 [INFO] [MOCK] HQ_Router(config)# description wan1_primary
+2026-06-24 15:22:47,893 [INFO] [MOCK] HQ_Router(config)# ip address 10.0.11.1 255.255.255.252
+2026-06-24 15:22:48,002 [INFO] [MOCK] HQ_Router(config)# no shutdown
+2026-06-24 15:22:48,002 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:48,002 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:48,002 [INFO] [HQ_Router] Interface g0/0 (wan1_primary) configured → IP: 10.0.11.1/255.255.255.252
+2026-06-24 15:22:48,003 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:48,003 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:48,105 [INFO] [MOCK] HQ_Router(config)# interface g0/1
+2026-06-24 15:22:48,205 [INFO] [MOCK] HQ_Router(config)# description wan1_backup
+2026-06-24 15:22:48,306 [INFO] [MOCK] HQ_Router(config)# ip address 10.0.12.1 255.255.255.252
+2026-06-24 15:22:48,407 [INFO] [MOCK] HQ_Router(config)# no shutdown
+2026-06-24 15:22:48,407 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:48,408 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:48,408 [INFO] [HQ_Router] Interface g0/1 (wan1_backup) configured → IP: 10.0.12.1/255.255.255.252
+2026-06-24 15:22:48,408 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:48,409 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:48,511 [INFO] [MOCK] HQ_Router(config)# interface g0/2
+2026-06-24 15:22:48,618 [INFO] [MOCK] HQ_Router(config)# description wan2_primary
+2026-06-24 15:22:48,719 [INFO] [MOCK] HQ_Router(config)# ip address 10.0.21.1 255.255.255.252
+2026-06-24 15:22:48,825 [INFO] [MOCK] HQ_Router(config)# no shutdown
+2026-06-24 15:22:48,825 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:48,825 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:48,825 [INFO] [HQ_Router] Interface g0/2 (wan2_primary) configured → IP: 10.0.21.1/255.255.255.252
+2026-06-24 15:22:48,825 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:48,825 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:48,928 [INFO] [MOCK] HQ_Router(config)# interface g0/3
+2026-06-24 15:22:49,038 [INFO] [MOCK] HQ_Router(config)# description wan2_backup
+2026-06-24 15:22:49,144 [INFO] [MOCK] HQ_Router(config)# ip address 10.0.22.1 255.255.255.252
+2026-06-24 15:22:49,245 [INFO] [MOCK] HQ_Router(config)# no shutdown
+2026-06-24 15:22:49,245 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:49,245 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:49,245 [INFO] [HQ_Router] Interface g0/3 (wan2_backup) configured → IP: 10.0.22.1/255.255.255.252
+2026-06-24 15:22:49,245 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:49,245 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:49,348 [INFO] [MOCK] HQ_Router(config)# interface g0/4
+2026-06-24 15:22:49,448 [INFO] [MOCK] HQ_Router(config)# description lan_trunk
+2026-06-24 15:22:49,558 [INFO] [MOCK] HQ_Router(config)# ip address 10.1.0.1 255.255.255.252
+2026-06-24 15:22:49,668 [INFO] [MOCK] HQ_Router(config)# no shutdown
+2026-06-24 15:22:49,668 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:49,668 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:49,668 [INFO] [HQ_Router] Interface g0/4 (lan_trunk) configured → IP: 10.1.0.1/255.255.255.252
+2026-06-24 15:22:49,668 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:49,668 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:49,778 [INFO] [MOCK] HQ_Router(config)# ip route 10.2.0.0 255.255.0.0 10.0.11.2
+2026-06-24 15:22:49,778 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:49,778 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:49,778 [INFO] [HQ_Router] Primary route: 10.2.0.0/255.255.0.0 via 10.0.11.2
+2026-06-24 15:22:49,778 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:22:49,778 [INFO] [MOCK] HQ_Router(config)#
+2026-06-24 15:22:49,888 [INFO] [MOCK] HQ_Router(config)# ip route 10.3.0.0 255.255.0.0 10.0.21.2
+2026-06-24 15:22:49,888 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:22:49,888 [INFO] [MOCK] HQ_Router#
+2026-06-24 15:22:49,888 [INFO] [HQ_Router] Primary route: 10.3.0.0/255.255.0.0 via 10.0.21.2
+2026-06-24 15:22:50,198 [INFO] 
+[MOCK] HQ_Router# show ip interface brief
+Interface              IP-Address      OK? Method Status      Protocol
+GigabitEthernet0/0    10.0.11.1       YES manual up          up
+GigabitEthernet0/1    10.0.12.1       YES manual up          up
+GigabitEthernet0/2    10.0.21.1       YES manual up          up
+GigabitEthernet0/3    10.0.22.1       YES manual up          up
+GigabitEthernet0/4    10.1.0.1        YES manual up          up
+2026-06-24 15:22:50,408 [INFO] [MOCK] SSH session closed for HQ_Router.
+2026-06-24 15:22:50,408 [INFO] HQ_Router [DONE] Configuration complete.
+2026-06-24 15:22:50,408 [INFO] 
+Configuring Giza_Router...
+2026-06-24 15:22:50,408 [INFO] [MOCK] Initialized configurator for: Giza_Router
+2026-06-24 15:22:50,408 [INFO] [MOCK] Initiating SSH connection to Giza_Router at 10.2.2.2...
+2026-06-24 15:22:50,914 [INFO] [MOCK] SSH connection established to Giza_Router.
+2026-06-24 15:22:50,914 [INFO] [MOCK] Giza_Router> enable
+2026-06-24 15:22:50,914 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:50,914 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:22:50,914 [INFO] [MOCK] Giza_Router(config)#
+2026-06-24 15:22:51,016 [INFO] [MOCK] Giza_Router(config)# hostname Giza_Router
+2026-06-24 15:22:51,016 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:22:51,016 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:51,016 [INFO] [Giza_Router] Hostname configured.
+2026-06-24 15:22:51,016 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:22:51,016 [INFO] [MOCK] Giza_Router(config)#
+2026-06-24 15:22:51,119 [INFO] [MOCK] Giza_Router(config)# interface g0/0
+2026-06-24 15:22:51,229 [INFO] [MOCK] Giza_Router(config)# description wan1_primary
+2026-06-24 15:22:51,330 [INFO] [MOCK] Giza_Router(config)# ip address 10.0.11.2 255.255.255.252
+2026-06-24 15:22:51,431 [INFO] [MOCK] Giza_Router(config)# no shutdown
+2026-06-24 15:22:51,431 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:22:51,431 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:51,431 [INFO] [Giza_Router] Interface g0/0 (wan1_primary) configured → IP: 10.0.11.2/255.255.255.252
+2026-06-24 15:22:51,431 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:22:51,431 [INFO] [MOCK] Giza_Router(config)#
+2026-06-24 15:22:51,534 [INFO] [MOCK] Giza_Router(config)# interface g0/1
+2026-06-24 15:22:51,634 [INFO] [MOCK] Giza_Router(config)# description wan1_backup
+2026-06-24 15:22:51,736 [INFO] [MOCK] Giza_Router(config)# ip address 10.0.12.2 255.255.255.252
+2026-06-24 15:22:51,836 [INFO] [MOCK] Giza_Router(config)# no shutdown
+2026-06-24 15:22:51,836 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:22:51,836 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:51,837 [INFO] [Giza_Router] Interface g0/1 (wan1_backup) configured → IP: 10.0.12.2/255.255.255.252
+2026-06-24 15:22:51,837 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:22:51,837 [INFO] [MOCK] Giza_Router(config)#
+2026-06-24 15:22:51,939 [INFO] [MOCK] Giza_Router(config)# interface g0/2
+2026-06-24 15:22:52,048 [INFO] [MOCK] Giza_Router(config)# description lan_trunk
+2026-06-24 15:22:52,149 [INFO] [MOCK] Giza_Router(config)# ip address 10.2.0.1 255.255.255.252
+2026-06-24 15:22:52,249 [INFO] [MOCK] Giza_Router(config)# no shutdown
+2026-06-24 15:22:52,249 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:22:52,249 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:52,250 [INFO] [Giza_Router] Interface g0/2 (lan_trunk) configured → IP: 10.2.0.1/255.255.255.252
+2026-06-24 15:22:52,250 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:22:52,251 [INFO] [MOCK] Giza_Router(config)#
+2026-06-24 15:22:52,358 [INFO] [MOCK] Giza_Router(config)# ip route 10.1.0.0 255.255.0.0 10.0.11.1
+2026-06-24 15:22:52,358 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:22:52,358 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:52,358 [INFO] [Giza_Router] Primary route: 10.1.0.0/255.255.0.0 via 10.0.11.1
+2026-06-24 15:22:52,358 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:22:52,358 [INFO] [MOCK] Giza_Router(config)#
+2026-06-24 15:22:52,461 [INFO] [MOCK] Giza_Router(config)# ip route 10.3.0.0 255.255.0.0 10.0.11.1
+2026-06-24 15:22:52,461 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:22:52,462 [INFO] [MOCK] Giza_Router#
+2026-06-24 15:22:52,462 [INFO] [Giza_Router] Primary route: 10.3.0.0/255.255.0.0 via 10.0.11.1
+2026-06-24 15:22:52,770 [INFO] 
+[MOCK] Giza_Router# show ip interface brief
+Interface              IP-Address      OK? Method Status      Protocol
+GigabitEthernet0/0    10.0.11.2       YES manual up          up
+GigabitEthernet0/1    10.0.12.2       YES manual up          up
+GigabitEthernet0/2    10.2.0.1        YES manual up          up
+2026-06-24 15:22:52,971 [INFO] [MOCK] SSH session closed for Giza_Router.
+2026-06-24 15:22:52,971 [INFO] Giza_Router [DONE] Configuration complete.
+2026-06-24 15:22:52,971 [INFO] 
+Configuring Alex_Router...
+2026-06-24 15:22:52,971 [INFO] [MOCK] Initialized configurator for: Alex_Router
+2026-06-24 15:22:52,971 [INFO] [MOCK] Initiating SSH connection to Alex_Router at 10.3.3.3...
+2026-06-24 15:22:53,479 [INFO] [MOCK] SSH connection established to Alex_Router.
+2026-06-24 15:22:53,479 [INFO] [MOCK] Alex_Router> enable
+2026-06-24 15:22:53,479 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:53,479 [INFO] [MOCK] Alex_Router# configure terminal
+2026-06-24 15:22:53,479 [INFO] [MOCK] Alex_Router(config)#
+2026-06-24 15:22:53,587 [INFO] [MOCK] Alex_Router(config)# hostname Alex_Router
+2026-06-24 15:22:53,587 [INFO] [MOCK] Alex_Router(config)# end
+2026-06-24 15:22:53,587 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:53,588 [INFO] [Alex_Router] Hostname configured.
+2026-06-24 15:22:53,588 [INFO] [MOCK] Alex_Router# configure terminal
+2026-06-24 15:22:53,588 [INFO] [MOCK] Alex_Router(config)#
+2026-06-24 15:22:53,694 [INFO] [MOCK] Alex_Router(config)# interface g0/0
+2026-06-24 15:22:53,795 [INFO] [MOCK] Alex_Router(config)# description wan2_primary
+2026-06-24 15:22:53,896 [INFO] [MOCK] Alex_Router(config)# ip address 10.0.21.2 255.255.255.252
+2026-06-24 15:22:53,996 [INFO] [MOCK] Alex_Router(config)# no shutdown
+2026-06-24 15:22:53,996 [INFO] [MOCK] Alex_Router(config)# end
+2026-06-24 15:22:53,996 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:53,996 [INFO] [Alex_Router] Interface g0/0 (wan2_primary) configured → IP: 10.0.21.2/255.255.255.252
+2026-06-24 15:22:53,996 [INFO] [MOCK] Alex_Router# configure terminal
+2026-06-24 15:22:53,996 [INFO] [MOCK] Alex_Router(config)#
+2026-06-24 15:22:54,100 [INFO] [MOCK] Alex_Router(config)# interface g0/1
+2026-06-24 15:22:54,208 [INFO] [MOCK] Alex_Router(config)# description wan2_backup
+2026-06-24 15:22:54,309 [INFO] [MOCK] Alex_Router(config)# ip address 10.0.22.2 255.255.255.252
+2026-06-24 15:22:54,409 [INFO] [MOCK] Alex_Router(config)# no shutdown
+2026-06-24 15:22:54,409 [INFO] [MOCK] Alex_Router(config)# end
+2026-06-24 15:22:54,409 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:54,410 [INFO] [Alex_Router] Interface g0/1 (wan2_backup) configured → IP: 10.0.22.2/255.255.255.252
+2026-06-24 15:22:54,410 [INFO] [MOCK] Alex_Router# configure terminal
+2026-06-24 15:22:54,410 [INFO] [MOCK] Alex_Router(config)#
+2026-06-24 15:22:54,512 [INFO] [MOCK] Alex_Router(config)# interface g0/2
+2026-06-24 15:22:54,618 [INFO] [MOCK] Alex_Router(config)# description lan_trunk
+2026-06-24 15:22:54,720 [INFO] [MOCK] Alex_Router(config)# ip address 10.3.0.1 255.255.255.252
+2026-06-24 15:22:54,826 [INFO] [MOCK] Alex_Router(config)# no shutdown
+2026-06-24 15:22:54,826 [INFO] [MOCK] Alex_Router(config)# end
+2026-06-24 15:22:54,826 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:54,826 [INFO] [Alex_Router] Interface g0/2 (lan_trunk) configured → IP: 10.3.0.1/255.255.255.252
+2026-06-24 15:22:54,826 [INFO] [MOCK] Alex_Router# configure terminal
+2026-06-24 15:22:54,826 [INFO] [MOCK] Alex_Router(config)#
+2026-06-24 15:22:54,929 [INFO] [MOCK] Alex_Router(config)# ip route 10.1.0.0 255.255.0.0 10.0.21.1
+2026-06-24 15:22:54,929 [INFO] [MOCK] Alex_Router(config)# end
+2026-06-24 15:22:54,929 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:54,930 [INFO] [Alex_Router] Primary route: 10.1.0.0/255.255.0.0 via 10.0.21.1
+2026-06-24 15:22:54,930 [INFO] [MOCK] Alex_Router# configure terminal
+2026-06-24 15:22:54,931 [INFO] [MOCK] Alex_Router(config)#
+2026-06-24 15:22:55,038 [INFO] [MOCK] Alex_Router(config)# ip route 10.2.0.0 255.255.0.0 10.0.21.1
+2026-06-24 15:22:55,038 [INFO] [MOCK] Alex_Router(config)# end
+2026-06-24 15:22:55,038 [INFO] [MOCK] Alex_Router#
+2026-06-24 15:22:55,038 [INFO] [Alex_Router] Primary route: 10.2.0.0/255.255.0.0 via 10.0.21.1
+2026-06-24 15:22:55,340 [INFO] 
+[MOCK] Alex_Router# show ip interface brief
+Interface              IP-Address      OK? Method Status      Protocol
+GigabitEthernet0/0    10.0.21.2       YES manual up          up
+GigabitEthernet0/1    10.0.22.2       YES manual up          up
+GigabitEthernet0/2    10.3.0.1        YES manual up          up
+2026-06-24 15:22:55,544 [INFO] [MOCK] SSH session closed for Alex_Router.
+2026-06-24 15:22:55,544 [INFO] Alex_Router [DONE] Configuration complete.
+2026-06-24 15:22:55,544 [INFO] ============================================================
+2026-06-24 15:22:55,544 [INFO] PHASE 2: Switch Configuration
+2026-06-24 15:22:55,544 [INFO] ============================================================
+2026-06-24 15:22:55,544 [INFO] 
+Configuring HQ_Switch...
+2026-06-24 15:22:55,544 [INFO] [MOCK] Initialized configurator for: HQ_Switch
+2026-06-24 15:22:55,544 [INFO] [MOCK] Initiating SSH connection to HQ_Switch at 10.11.11.11...
+2026-06-24 15:22:56,052 [INFO] [MOCK] SSH connection established to HQ_Switch.
+2026-06-24 15:22:56,053 [INFO] [MOCK] HQ_Switch> enable
+2026-06-24 15:22:56,053 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:56,053 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:56,053 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:56,163 [INFO] [MOCK] HQ_Switch(config)# hostname HQ_Switch
+2026-06-24 15:22:56,163 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:56,163 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:56,163 [INFO] [HQ_Switch] Hostname configured.
+2026-06-24 15:22:56,163 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:56,163 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:56,266 [INFO] [MOCK] HQ_Switch(config)# ip routing
+2026-06-24 15:22:56,266 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:56,266 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:56,267 [INFO] [HQ_Switch] IP routing enabled.
+2026-06-24 15:22:56,267 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:56,268 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:56,368 [INFO] [MOCK] HQ_Switch(config)# vlan 10
+2026-06-24 15:22:56,469 [INFO] [MOCK] HQ_Switch(config)# name Management
+2026-06-24 15:22:56,469 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:56,469 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:56,469 [INFO] [HQ_Switch] VLAN 10 (Management) created.
+2026-06-24 15:22:56,469 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:56,469 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:56,581 [INFO] [MOCK] HQ_Switch(config)# vlan 20
+2026-06-24 15:22:56,682 [INFO] [MOCK] HQ_Switch(config)# name Users
+2026-06-24 15:22:56,682 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:56,682 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:56,682 [INFO] [HQ_Switch] VLAN 20 (Users) created.
+2026-06-24 15:22:56,682 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:56,682 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:56,791 [INFO] [MOCK] HQ_Switch(config)# interface vlan 10
+2026-06-24 15:22:56,892 [INFO] [MOCK] HQ_Switch(config)# ip address 10.1.10.1 255.255.255.0
+2026-06-24 15:22:56,993 [INFO] [MOCK] HQ_Switch(config)# no shutdown
+2026-06-24 15:22:56,993 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:56,993 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:56,993 [INFO] [HQ_Switch] SVI VLAN 10 configured → IP: 10.1.10.1
+2026-06-24 15:22:56,993 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:56,993 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:57,095 [INFO] [MOCK] HQ_Switch(config)# interface vlan 20
+2026-06-24 15:22:57,196 [INFO] [MOCK] HQ_Switch(config)# ip address 10.1.20.1 255.255.255.0
+2026-06-24 15:22:57,297 [INFO] [MOCK] HQ_Switch(config)# no shutdown
+2026-06-24 15:22:57,297 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:57,297 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:57,298 [INFO] [HQ_Switch] SVI VLAN 20 configured → IP: 10.1.20.1
+2026-06-24 15:22:57,298 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:57,299 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:57,400 [INFO] [MOCK] HQ_Switch(config)# interface g0/1
+2026-06-24 15:22:57,500 [INFO] [MOCK] HQ_Switch(config)# no switchport
+2026-06-24 15:22:57,601 [INFO] [MOCK] HQ_Switch(config)# ip address 10.1.0.2 255.255.255.252
+2026-06-24 15:22:57,702 [INFO] [MOCK] HQ_Switch(config)# no shutdown
+2026-06-24 15:22:57,702 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:57,702 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:57,702 [INFO] [HQ_Switch] Uplink g0/1 configured as routed port → IP: 10.1.0.2
+2026-06-24 15:22:57,702 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:57,702 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:57,805 [INFO] [MOCK] HQ_Switch(config)# ip route 0.0.0.0 0.0.0.0 10.1.0.1
+2026-06-24 15:22:57,805 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:57,805 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:57,805 [INFO] [HQ_Switch] Default route configured → via 10.1.0.1
+2026-06-24 15:22:57,805 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:57,806 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:57,908 [INFO] [MOCK] HQ_Switch(config)# ip dhcp excluded-address 10.1.10.1 10.1.10.10
+2026-06-24 15:22:58,009 [INFO] [MOCK] HQ_Switch(config)# ip dhcp pool HQ_VLAN10_Management
+2026-06-24 15:22:58,114 [INFO] [MOCK] HQ_Switch(config)#  network 10.1.10.0 255.255.255.0
+2026-06-24 15:22:58,225 [INFO] [MOCK] HQ_Switch(config)#  default-router 10.1.10.1
+2026-06-24 15:22:58,326 [INFO] [MOCK] HQ_Switch(config)#  dns-server 8.8.8.8
+2026-06-24 15:22:58,435 [INFO] [MOCK] HQ_Switch(config)#  lease 7
+2026-06-24 15:22:58,435 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:58,435 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:58,435 [INFO] [HQ_Switch] DHCP pool HQ_VLAN10_Management configured | Network: 10.1.10.0/255.255.255.0 | Gateway: 10.1.10.1 | Excluded: 10.1.10.1-10.1.10.10
+2026-06-24 15:22:58,435 [INFO] [MOCK] HQ_Switch# configure terminal
+2026-06-24 15:22:58,435 [INFO] [MOCK] HQ_Switch(config)#
+2026-06-24 15:22:58,545 [INFO] [MOCK] HQ_Switch(config)# ip dhcp excluded-address 10.1.20.1 10.1.20.10
+2026-06-24 15:22:58,646 [INFO] [MOCK] HQ_Switch(config)# ip dhcp pool HQ_VLAN20_Users
+2026-06-24 15:22:58,747 [INFO] [MOCK] HQ_Switch(config)#  network 10.1.20.0 255.255.255.0
+2026-06-24 15:22:58,849 [INFO] [MOCK] HQ_Switch(config)#  default-router 10.1.20.1
+2026-06-24 15:22:58,958 [INFO] [MOCK] HQ_Switch(config)#  dns-server 8.8.8.8
+2026-06-24 15:22:59,068 [INFO] [MOCK] HQ_Switch(config)#  lease 7
+2026-06-24 15:22:59,068 [INFO] [MOCK] HQ_Switch(config)# end
+2026-06-24 15:22:59,068 [INFO] [MOCK] HQ_Switch#
+2026-06-24 15:22:59,068 [INFO] [HQ_Switch] DHCP pool HQ_VLAN20_Users configured | Network: 10.1.20.0/255.255.255.0 | Gateway: 10.1.20.1 | Excluded: 10.1.20.1-10.1.20.10
+2026-06-24 15:22:59,378 [INFO] 
+[MOCK] HQ_Switch# show ip interface brief
+Interface              IP-Address      OK? Method Status      Protocol
+Vlan10                  10.1.10.1       YES manual up          up
+Vlan20                  10.1.20.1       YES manual up          up
+2026-06-24 15:22:59,579 [INFO] [MOCK] SSH session closed for HQ_Switch.
+2026-06-24 15:22:59,579 [INFO] HQ_Switch [DONE] Configuration complete.
+2026-06-24 15:22:59,579 [INFO] 
+Configuring Giza_Switch...
+2026-06-24 15:22:59,579 [INFO] [MOCK] Initialized configurator for: Giza_Switch
+2026-06-24 15:22:59,579 [INFO] [MOCK] Initiating SSH connection to Giza_Switch at 10.22.22.22...
+2026-06-24 15:23:00,089 [INFO] [MOCK] SSH connection established to Giza_Switch.
+2026-06-24 15:23:00,089 [INFO] [MOCK] Giza_Switch> enable
+2026-06-24 15:23:00,089 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:00,089 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:00,089 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:00,194 [INFO] [MOCK] Giza_Switch(config)# hostname Giza_Switch
+2026-06-24 15:23:00,194 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:00,194 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:00,194 [INFO] [Giza_Switch] Hostname configured.
+2026-06-24 15:23:00,194 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:00,194 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:00,297 [INFO] [MOCK] Giza_Switch(config)# ip routing
+2026-06-24 15:23:00,297 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:00,297 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:00,298 [INFO] [Giza_Switch] IP routing enabled.
+2026-06-24 15:23:00,298 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:00,299 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:00,400 [INFO] [MOCK] Giza_Switch(config)# vlan 10
+2026-06-24 15:23:00,501 [INFO] [MOCK] Giza_Switch(config)# name Management
+2026-06-24 15:23:00,501 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:00,501 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:00,501 [INFO] [Giza_Switch] VLAN 10 (Management) created.
+2026-06-24 15:23:00,501 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:00,501 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:00,604 [INFO] [MOCK] Giza_Switch(config)# vlan 20
+2026-06-24 15:23:00,708 [INFO] [MOCK] Giza_Switch(config)# name Users
+2026-06-24 15:23:00,708 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:00,708 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:00,708 [INFO] [Giza_Switch] VLAN 20 (Users) created.
+2026-06-24 15:23:00,708 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:00,708 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:00,811 [INFO] [MOCK] Giza_Switch(config)# interface vlan 10
+2026-06-24 15:23:00,912 [INFO] [MOCK] Giza_Switch(config)# ip address 10.2.10.1 255.255.255.0
+2026-06-24 15:23:01,023 [INFO] [MOCK] Giza_Switch(config)# no shutdown
+2026-06-24 15:23:01,023 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:01,023 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:01,023 [INFO] [Giza_Switch] SVI VLAN 10 configured → IP: 10.2.10.1
+2026-06-24 15:23:01,023 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:01,023 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:01,135 [INFO] [MOCK] Giza_Switch(config)# interface vlan 20
+2026-06-24 15:23:01,244 [INFO] [MOCK] Giza_Switch(config)# ip address 10.2.20.1 255.255.255.0
+2026-06-24 15:23:01,345 [INFO] [MOCK] Giza_Switch(config)# no shutdown
+2026-06-24 15:23:01,345 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:01,345 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:01,345 [INFO] [Giza_Switch] SVI VLAN 20 configured → IP: 10.2.20.1
+2026-06-24 15:23:01,345 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:01,348 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:01,449 [INFO] [MOCK] Giza_Switch(config)# interface g0/1
+2026-06-24 15:23:01,558 [INFO] [MOCK] Giza_Switch(config)# no switchport
+2026-06-24 15:23:01,659 [INFO] [MOCK] Giza_Switch(config)# ip address 10.2.0.2 255.255.255.252
+2026-06-24 15:23:01,760 [INFO] [MOCK] Giza_Switch(config)# no shutdown
+2026-06-24 15:23:01,760 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:01,760 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:01,761 [INFO] [Giza_Switch] Uplink g0/1 configured as routed port → IP: 10.2.0.2
+2026-06-24 15:23:01,761 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:01,762 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:01,864 [INFO] [MOCK] Giza_Switch(config)# ip route 0.0.0.0 0.0.0.0 10.2.0.1
+2026-06-24 15:23:01,864 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:01,865 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:01,866 [INFO] [Giza_Switch] Default route configured → via 10.2.0.1
+2026-06-24 15:23:01,866 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:01,867 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:01,968 [INFO] [MOCK] Giza_Switch(config)# ip dhcp excluded-address 10.2.10.1 10.2.10.10
+2026-06-24 15:23:02,069 [INFO] [MOCK] Giza_Switch(config)# ip dhcp pool Giza_VLAN10_Management
+2026-06-24 15:23:02,179 [INFO] [MOCK] Giza_Switch(config)#  network 10.2.10.0 255.255.255.0
+2026-06-24 15:23:02,288 [INFO] [MOCK] Giza_Switch(config)#  default-router 10.2.10.1
+2026-06-24 15:23:02,394 [INFO] [MOCK] Giza_Switch(config)#  dns-server 8.8.8.8
+2026-06-24 15:23:02,497 [INFO] [MOCK] Giza_Switch(config)#  lease 7
+2026-06-24 15:23:02,497 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:02,497 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:02,497 [INFO] [Giza_Switch] DHCP pool Giza_VLAN10_Management configured | Network: 10.2.10.0/255.255.255.0 | Gateway: 10.2.10.1 | Excluded: 10.2.10.1-10.2.10.10
+2026-06-24 15:23:02,497 [INFO] [MOCK] Giza_Switch# configure terminal
+2026-06-24 15:23:02,497 [INFO] [MOCK] Giza_Switch(config)#
+2026-06-24 15:23:02,602 [INFO] [MOCK] Giza_Switch(config)# ip dhcp excluded-address 10.2.20.1 10.2.20.10
+2026-06-24 15:23:02,702 [INFO] [MOCK] Giza_Switch(config)# ip dhcp pool Giza_VLAN20_Users
+2026-06-24 15:23:02,803 [INFO] [MOCK] Giza_Switch(config)#  network 10.2.20.0 255.255.255.0
+2026-06-24 15:23:02,904 [INFO] [MOCK] Giza_Switch(config)#  default-router 10.2.20.1
+2026-06-24 15:23:03,008 [INFO] [MOCK] Giza_Switch(config)#  dns-server 8.8.8.8
+2026-06-24 15:23:03,119 [INFO] [MOCK] Giza_Switch(config)#  lease 7
+2026-06-24 15:23:03,119 [INFO] [MOCK] Giza_Switch(config)# end
+2026-06-24 15:23:03,119 [INFO] [MOCK] Giza_Switch#
+2026-06-24 15:23:03,119 [INFO] [Giza_Switch] DHCP pool Giza_VLAN20_Users configured | Network: 10.2.20.0/255.255.255.0 | Gateway: 10.2.20.1 | Excluded: 10.2.20.1-10.2.20.10
+2026-06-24 15:23:03,429 [INFO] 
+[MOCK] Giza_Switch# show ip interface brief
+Interface              IP-Address      OK? Method Status      Protocol
+Vlan10                  10.2.10.1       YES manual up          up
+Vlan20                  10.2.20.1       YES manual up          up
+2026-06-24 15:23:03,630 [INFO] [MOCK] SSH session closed for Giza_Switch.
+2026-06-24 15:23:03,630 [INFO] Giza_Switch [DONE] Configuration complete.
+2026-06-24 15:23:03,630 [INFO] 
+Configuring Alex_Switch...
+2026-06-24 15:23:03,630 [INFO] [MOCK] Initialized configurator for: Alex_Switch
+2026-06-24 15:23:03,630 [INFO] [MOCK] Initiating SSH connection to Alex_Switch at 10.33.33.33...
+2026-06-24 15:23:04,138 [INFO] [MOCK] SSH connection established to Alex_Switch.
+2026-06-24 15:23:04,138 [INFO] [MOCK] Alex_Switch> enable
+2026-06-24 15:23:04,138 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:04,138 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:04,138 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:04,241 [INFO] [MOCK] Alex_Switch(config)# hostname Alex_Switch
+2026-06-24 15:23:04,241 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:04,241 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:04,241 [INFO] [Alex_Switch] Hostname configured.
+2026-06-24 15:23:04,241 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:04,241 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:04,344 [INFO] [MOCK] Alex_Switch(config)# ip routing
+2026-06-24 15:23:04,344 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:04,345 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:04,345 [INFO] [Alex_Switch] IP routing enabled.
+2026-06-24 15:23:04,345 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:04,346 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:04,448 [INFO] [MOCK] Alex_Switch(config)# vlan 10
+2026-06-24 15:23:04,549 [INFO] [MOCK] Alex_Switch(config)# name Management
+2026-06-24 15:23:04,549 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:04,550 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:04,550 [INFO] [Alex_Switch] VLAN 10 (Management) created.
+2026-06-24 15:23:04,550 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:04,551 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:04,652 [INFO] [MOCK] Alex_Switch(config)# vlan 20
+2026-06-24 15:23:04,753 [INFO] [MOCK] Alex_Switch(config)# name Users
+2026-06-24 15:23:04,753 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:04,753 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:04,753 [INFO] [Alex_Switch] VLAN 20 (Users) created.
+2026-06-24 15:23:04,753 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:04,753 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:04,858 [INFO] [MOCK] Alex_Switch(config)# interface vlan 10
+2026-06-24 15:23:04,964 [INFO] [MOCK] Alex_Switch(config)# ip address 10.3.10.1 255.255.255.0
+2026-06-24 15:23:05,064 [INFO] [MOCK] Alex_Switch(config)# no shutdown
+2026-06-24 15:23:05,064 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:05,064 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:05,064 [INFO] [Alex_Switch] SVI VLAN 10 configured → IP: 10.3.10.1
+2026-06-24 15:23:05,064 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:05,064 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:05,168 [INFO] [MOCK] Alex_Switch(config)# interface vlan 20
+2026-06-24 15:23:05,278 [INFO] [MOCK] Alex_Switch(config)# ip address 10.3.20.1 255.255.255.0
+2026-06-24 15:23:05,381 [INFO] [MOCK] Alex_Switch(config)# no shutdown
+2026-06-24 15:23:05,382 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:05,382 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:05,383 [INFO] [Alex_Switch] SVI VLAN 20 configured → IP: 10.3.20.1
+2026-06-24 15:23:05,384 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:05,385 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:05,486 [INFO] [MOCK] Alex_Switch(config)# interface g0/1
+2026-06-24 15:23:05,587 [INFO] [MOCK] Alex_Switch(config)# no switchport
+2026-06-24 15:23:05,688 [INFO] [MOCK] Alex_Switch(config)# ip address 10.3.0.2 255.255.255.252
+2026-06-24 15:23:05,789 [INFO] [MOCK] Alex_Switch(config)# no shutdown
+2026-06-24 15:23:05,789 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:05,789 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:05,789 [INFO] [Alex_Switch] Uplink g0/1 configured as routed port → IP: 10.3.0.2
+2026-06-24 15:23:05,789 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:05,789 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:05,893 [INFO] [MOCK] Alex_Switch(config)# ip route 0.0.0.0 0.0.0.0 10.3.0.1
+2026-06-24 15:23:05,893 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:05,894 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:05,894 [INFO] [Alex_Switch] Default route configured → via 10.3.0.1
+2026-06-24 15:23:05,895 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:05,895 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:05,996 [INFO] [MOCK] Alex_Switch(config)# ip dhcp excluded-address 10.3.10.1 10.3.10.10
+2026-06-24 15:23:06,097 [INFO] [MOCK] Alex_Switch(config)# ip dhcp pool Alex_VLAN10_Management
+2026-06-24 15:23:06,198 [INFO] [MOCK] Alex_Switch(config)#  network 10.3.10.0 255.255.255.0
+2026-06-24 15:23:06,300 [INFO] [MOCK] Alex_Switch(config)#  default-router 10.3.10.1
+2026-06-24 15:23:06,401 [INFO] [MOCK] Alex_Switch(config)#  dns-server 8.8.8.8
+2026-06-24 15:23:06,502 [INFO] [MOCK] Alex_Switch(config)#  lease 7
+2026-06-24 15:23:06,502 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:06,502 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:06,502 [INFO] [Alex_Switch] DHCP pool Alex_VLAN10_Management configured | Network: 10.3.10.0/255.255.255.0 | Gateway: 10.3.10.1 | Excluded: 10.3.10.1-10.3.10.10
+2026-06-24 15:23:06,502 [INFO] [MOCK] Alex_Switch# configure terminal
+2026-06-24 15:23:06,502 [INFO] [MOCK] Alex_Switch(config)#
+2026-06-24 15:23:06,607 [INFO] [MOCK] Alex_Switch(config)# ip dhcp excluded-address 10.3.20.1 10.3.20.10
+2026-06-24 15:23:06,708 [INFO] [MOCK] Alex_Switch(config)# ip dhcp pool Alex_VLAN20_Users
+2026-06-24 15:23:06,818 [INFO] [MOCK] Alex_Switch(config)#  network 10.3.20.0 255.255.255.0
+2026-06-24 15:23:06,919 [INFO] [MOCK] Alex_Switch(config)#  default-router 10.3.20.1
+2026-06-24 15:23:07,021 [INFO] [MOCK] Alex_Switch(config)#  dns-server 8.8.8.8
+2026-06-24 15:23:07,121 [INFO] [MOCK] Alex_Switch(config)#  lease 7
+2026-06-24 15:23:07,121 [INFO] [MOCK] Alex_Switch(config)# end
+2026-06-24 15:23:07,122 [INFO] [MOCK] Alex_Switch#
+2026-06-24 15:23:07,122 [INFO] [Alex_Switch] DHCP pool Alex_VLAN20_Users configured | Network: 10.3.20.0/255.255.255.0 | Gateway: 10.3.20.1 | Excluded: 10.3.20.1-10.3.20.10
+2026-06-24 15:23:07,424 [INFO] 
+[MOCK] Alex_Switch# show ip interface brief
+Interface              IP-Address      OK? Method Status      Protocol
+Vlan10                  10.3.10.1       YES manual up          up
+Vlan20                  10.3.20.1       YES manual up          up
+2026-06-24 15:23:07,625 [INFO] [MOCK] SSH session closed for Alex_Switch.
+2026-06-24 15:23:07,625 [INFO] Alex_Switch [DONE] Configuration complete.
+2026-06-24 15:23:07,626 [INFO] 
+============================================================
+2026-06-24 15:23:07,627 [INFO] PHASE 3: Network Monitoring & Failover
+2026-06-24 15:23:07,627 [INFO] ============================================================
+2026-06-24 15:23:07,627 [INFO] NetworkMonitor initialized in MOCK mode.
+2026-06-24 15:23:07,628 [INFO] Monitoring interval: 10s | Mock failure after: 30s | Mock recovery after: 60s
+2026-06-24 15:23:07,630 [INFO] ============================================================
+2026-06-24 15:23:07,631 [INFO] Network monitoring STARTED. Press Ctrl+C to stop.
+2026-06-24 15:23:07,631 [INFO] [MOCK] Link failure will be simulated at t=30s
+2026-06-24 15:23:07,631 [INFO] [MOCK] Link recovery will be simulated at t=60s
+2026-06-24 15:23:07,632 [INFO] ============================================================
+2026-06-24 15:23:07,632 [INFO] 
+--- Monitoring Cycle #1 | Elapsed: 0s ---
+2026-06-24 15:23:07,633 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:23:07,833 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:23:07,833 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:23:08,035 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:23:08,035 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:23:08,236 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:08,237 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:23:08,438 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:08,438 [INFO] --- Cycle #1 complete. Next check in 10s ---
+2026-06-24 15:23:18,440 [INFO] 
+--- Monitoring Cycle #2 | Elapsed: 10s ---
+2026-06-24 15:23:18,441 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:23:18,642 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:23:18,642 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:23:18,844 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:23:18,844 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:23:19,046 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:19,046 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:23:19,247 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:19,247 [INFO] --- Cycle #2 complete. Next check in 10s ---
+2026-06-24 15:23:29,248 [INFO] 
+--- Monitoring Cycle #3 | Elapsed: 21s ---
+2026-06-24 15:23:29,248 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:23:29,450 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:23:29,450 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:23:29,651 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:23:29,651 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:23:29,853 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:29,853 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:23:30,055 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:30,055 [INFO] --- Cycle #3 complete. Next check in 10s ---
+2026-06-24 15:23:40,056 [INFO] 
+--- Monitoring Cycle #4 | Elapsed: 32s ---
+2026-06-24 15:23:40,056 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:23:40,258 [WARNING] [MOCK] Simulating link failure on 10.0.11.2 (wan1_primary)
+2026-06-24 15:23:40,258 [WARNING] [HQ_Router] Link wan1_primary DOWN | Initiating FAILOVER...
+2026-06-24 15:23:40,259 [WARNING] [HQ_Router] *** FAILOVER INITIATED ***
+2026-06-24 15:23:40,259 [WARNING] [HQ_Router] Destination: 10.2.0.0/255.255.0.0
+2026-06-24 15:23:40,260 [WARNING] [HQ_Router] Removing primary route via 10.0.11.2
+2026-06-24 15:23:40,261 [WARNING] [HQ_Router] Adding backup route via 10.0.12.2
+2026-06-24 15:23:40,762 [INFO] [MOCK] SSH connection established to HQ_Router for route update.
+2026-06-24 15:23:40,762 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:23:40,863 [INFO] [MOCK] HQ_Router(config)# no ip route 10.2.0.0 255.255.0.0 10.0.11.2
+2026-06-24 15:23:40,964 [INFO] [MOCK] HQ_Router(config)# ip route 10.2.0.0 255.255.0.0 10.0.12.2
+2026-06-24 15:23:40,964 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:23:40,964 [WARNING] [HQ_Router] *** FAILOVER COMPLETE *** Traffic rerouted via 10.0.12.2
+2026-06-24 15:23:41,166 [INFO] [MOCK] SSH session closed after failover.
+2026-06-24 15:23:41,166 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:23:41,367 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:23:41,367 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:23:41,568 [WARNING] [MOCK] Simulating link failure on 10.0.11.1 (wan1_primary)
+2026-06-24 15:23:41,568 [WARNING] [Giza_Router] Link wan1_primary DOWN | Initiating FAILOVER...
+2026-06-24 15:23:41,568 [WARNING] [Giza_Router] *** FAILOVER INITIATED ***
+2026-06-24 15:23:41,568 [WARNING] [Giza_Router] Destination: 10.1.0.0/255.255.0.0
+2026-06-24 15:23:41,568 [WARNING] [Giza_Router] Removing primary route via 10.0.11.1
+2026-06-24 15:23:41,568 [WARNING] [Giza_Router] Adding backup route via 10.0.12.1
+2026-06-24 15:23:42,071 [INFO] [MOCK] SSH connection established to Giza_Router for route update.
+2026-06-24 15:23:42,072 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:23:42,173 [INFO] [MOCK] Giza_Router(config)# no ip route 10.1.0.0 255.255.0.0 10.0.11.1
+2026-06-24 15:23:42,274 [INFO] [MOCK] Giza_Router(config)# ip route 10.1.0.0 255.255.0.0 10.0.12.1
+2026-06-24 15:23:42,274 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:23:42,274 [WARNING] [Giza_Router] *** FAILOVER COMPLETE *** Traffic rerouted via 10.0.12.1
+2026-06-24 15:23:42,475 [INFO] [MOCK] SSH session closed after failover.
+2026-06-24 15:23:42,475 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:23:42,681 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:42,681 [INFO] --- Cycle #4 complete. Next check in 10s ---
+2026-06-24 15:23:52,689 [INFO] 
+--- Monitoring Cycle #5 | Elapsed: 45s ---
+2026-06-24 15:23:52,689 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:23:52,890 [WARNING] [HQ_Router] Link wan1_primary still DOWN | Backup route already active.
+2026-06-24 15:23:52,890 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:23:53,092 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:23:53,092 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:23:53,293 [WARNING] [Giza_Router] Link wan1_primary still DOWN | Backup route already active.
+2026-06-24 15:23:53,293 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:23:53,495 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:23:53,495 [INFO] --- Cycle #5 complete. Next check in 10s ---
+2026-06-24 15:24:03,496 [INFO] 
+--- Monitoring Cycle #6 | Elapsed: 55s ---
+2026-06-24 15:24:03,496 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:24:03,698 [WARNING] [HQ_Router] Link wan1_primary still DOWN | Backup route already active.
+2026-06-24 15:24:03,698 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:24:03,899 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:24:03,899 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:24:04,101 [WARNING] [Giza_Router] Link wan1_primary still DOWN | Backup route already active.
+2026-06-24 15:24:04,101 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:24:04,301 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:04,301 [INFO] --- Cycle #6 complete. Next check in 10s ---
+2026-06-24 15:24:14,303 [INFO] 
+--- Monitoring Cycle #7 | Elapsed: 66s ---
+2026-06-24 15:24:14,303 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:24:14,504 [INFO] [MOCK] Link 10.0.11.2 (wan1_primary) has recovered.
+2026-06-24 15:24:14,504 [INFO] [HQ_Router] Link wan1_primary RECOVERED | Initiating FAILBACK...
+2026-06-24 15:24:14,504 [INFO] [HQ_Router] *** FAILBACK INITIATED ***
+2026-06-24 15:24:14,506 [INFO] [HQ_Router] Destination: 10.2.0.0/255.255.0.0
+2026-06-24 15:24:14,506 [INFO] [HQ_Router] Removing backup route via 10.0.12.2
+2026-06-24 15:24:14,506 [INFO] [HQ_Router] Restoring primary route via 10.0.11.2
+2026-06-24 15:24:15,007 [INFO] [MOCK] SSH connection established to HQ_Router for route update.
+2026-06-24 15:24:15,008 [INFO] [MOCK] HQ_Router# configure terminal
+2026-06-24 15:24:15,114 [INFO] [MOCK] HQ_Router(config)# no ip route 10.2.0.0 255.255.0.0 10.0.12.2
+2026-06-24 15:24:15,215 [INFO] [MOCK] HQ_Router(config)# ip route 10.2.0.0 255.255.0.0 10.0.11.2
+2026-06-24 15:24:15,215 [INFO] [MOCK] HQ_Router(config)# end
+2026-06-24 15:24:15,215 [INFO] [HQ_Router] *** FAILBACK COMPLETE *** Traffic restored via 10.0.11.2
+2026-06-24 15:24:15,416 [INFO] [MOCK] SSH session closed after failback.
+2026-06-24 15:24:15,416 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:24:15,620 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:24:15,620 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:24:15,821 [INFO] [MOCK] Link 10.0.11.1 (wan1_primary) has recovered.
+2026-06-24 15:24:15,821 [INFO] [Giza_Router] Link wan1_primary RECOVERED | Initiating FAILBACK...
+2026-06-24 15:24:15,821 [INFO] [Giza_Router] *** FAILBACK INITIATED ***
+2026-06-24 15:24:15,821 [INFO] [Giza_Router] Destination: 10.1.0.0/255.255.0.0
+2026-06-24 15:24:15,821 [INFO] [Giza_Router] Removing backup route via 10.0.12.1
+2026-06-24 15:24:15,821 [INFO] [Giza_Router] Restoring primary route via 10.0.11.1
+2026-06-24 15:24:16,324 [INFO] [MOCK] SSH connection established to Giza_Router for route update.
+2026-06-24 15:24:16,324 [INFO] [MOCK] Giza_Router# configure terminal
+2026-06-24 15:24:16,430 [INFO] [MOCK] Giza_Router(config)# no ip route 10.1.0.0 255.255.0.0 10.0.12.1
+2026-06-24 15:24:16,531 [INFO] [MOCK] Giza_Router(config)# ip route 10.1.0.0 255.255.0.0 10.0.11.1
+2026-06-24 15:24:16,531 [INFO] [MOCK] Giza_Router(config)# end
+2026-06-24 15:24:16,531 [INFO] [Giza_Router] *** FAILBACK COMPLETE *** Traffic restored via 10.0.11.1
+2026-06-24 15:24:16,732 [INFO] [MOCK] SSH session closed after failback.
+2026-06-24 15:24:16,732 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:24:16,933 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:16,933 [INFO] --- Cycle #7 complete. Next check in 10s ---
+2026-06-24 15:24:26,934 [INFO] 
+--- Monitoring Cycle #8 | Elapsed: 79s ---
+2026-06-24 15:24:26,934 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:24:27,135 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:24:27,135 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:24:27,336 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:24:27,336 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:24:27,537 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:27,537 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:24:27,739 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:27,739 [INFO] --- Cycle #8 complete. Next check in 10s ---
+2026-06-24 15:24:37,741 [INFO] 
+--- Monitoring Cycle #9 | Elapsed: 90s ---
+2026-06-24 15:24:37,741 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:24:37,943 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:24:37,943 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:24:38,145 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:24:38,145 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:24:38,346 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:38,346 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:24:38,548 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:38,548 [INFO] --- Cycle #9 complete. Next check in 10s ---
+2026-06-24 15:24:48,549 [INFO] 
+--- Monitoring Cycle #10 | Elapsed: 100s ---
+2026-06-24 15:24:48,549 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:24:48,750 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:24:48,750 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:24:48,951 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:24:48,951 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:24:49,152 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:49,152 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:24:49,353 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:49,353 [INFO] --- Cycle #10 complete. Next check in 10s ---
+2026-06-24 15:24:59,354 [INFO] 
+--- Monitoring Cycle #11 | Elapsed: 111s ---
+2026-06-24 15:24:59,354 [INFO] [HQ_Router] Pinging 10.0.11.2 (wan1_primary)...
+2026-06-24 15:24:59,555 [INFO] [HQ_Router] Link wan1_primary UP | Route to 10.2.0.0: PRIMARY active.
+2026-06-24 15:24:59,555 [INFO] [HQ_Router] Pinging 10.0.21.2 (wan2_primary)...
+2026-06-24 15:24:59,757 [INFO] [HQ_Router] Link wan2_primary UP | Route to 10.3.0.0: PRIMARY active.
+2026-06-24 15:24:59,757 [INFO] [Giza_Router] Pinging 10.0.11.1 (wan1_primary)...
+2026-06-24 15:24:59,958 [INFO] [Giza_Router] Link wan1_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:24:59,958 [INFO] [Alex_Router] Pinging 10.0.21.1 (wan2_primary)...
+2026-06-24 15:25:00,159 [INFO] [Alex_Router] Link wan2_primary UP | Route to 10.1.0.0: PRIMARY active.
+2026-06-24 15:25:00,159 [INFO] --- Cycle #11 complete. Next check in 10s ---
+2026-06-24 15:25:09,416 [INFO] 
+Monitoring stopped by user (Ctrl+C).
+2026-06-24 15:25:09,416 [INFO] ============================================================

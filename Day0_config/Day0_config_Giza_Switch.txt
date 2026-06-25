@@ -1,0 +1,48 @@
+! ============================================================
+! Day 0 Configuration - Giza_Switch
+! Purpose: Enable SSH management access before Python automation
+! Management IP: 10.2.2.2/32 (Loopback0)
+! ============================================================
+
+Switch> enable
+Switch# configure terminal
+
+! --- Hostname ---
+Switch(config)# hostname Giza_Switch
+
+! --- Domain and SSH Setup ---
+Giza_Switch(config)# ip domain-name techlink.local
+Giza_Switch(config)# crypto key generate rsa modulus 2048
+Giza_Switch(config)# ip ssh version 2
+
+! --- Local Credentials ---
+Giza_Switch(config)# enable secret cisco
+Giza_Switch(config)# username admin secret cisco
+
+! --- Enable IP Routing (required for L3 switching) ---
+Giza_Switch(config)# ip routing
+
+! --- Loopback for Management (always up, SSH target) ---
+Giza_Switch(config)# interface Loopback0
+Giza_Switch(config-if)# ip address 10.22.22.22 255.255.255.255
+Giza_Switch(config-if)# no shutdown
+Giza_Switch(config-if)# exit
+
+! --- Uplink to HQ Router ---
+HQ_Switch(config)# interface GigabitEthernet0/1
+HQ_Switch(config-if)# no switchport
+HQ_Switch(config-if)# ip address 10.2.0.2 255.255.255.252
+HQ_Switch(config-if)# no shutdown
+HQ_Switch(config-if)# exit
+
+! --- Default route to reach router and beyond ---
+HQ_Switch(config)# ip route 0.0.0.0 0.0.0.0 10.2.0.1
+
+! --- VTY Lines for SSH Access ---
+Giza_Switch(config)# line vty 0 15
+Giza_Switch(config-line)# login local
+Giza_Switch(config-line)# exec-timeout 5 0
+Giza_Switch(config-line)# transport input ssh
+Giza_Switch(config-line)# exit
+
+Giza_Switch(config)# end
