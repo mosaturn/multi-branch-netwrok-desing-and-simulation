@@ -13,7 +13,7 @@ The project covers full network design including IP addressing, VLAN segmentatio
 | `monitor.py` | NetworkMonitor class — monitors links, triggers failover/failback |
 | `config.json` | Device data — IPs, interfaces, routes, VLANs, DHCP pools |
 | `day0_configs/` | Manual bootstrap configs for all 6 devices |
-| `docs/` | Network design document and topology diagram |
+| `Network Documentation.pdf` | Network design document and topology diagram |
 | `sample_output/` | Sample log showing configuration and failover events |
 
 ## How to Run
